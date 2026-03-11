@@ -1,0 +1,18 @@
+name: AtCoder Submissions Pusher
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # 毎日日本時間の午前9時に実行（UTC 0:00）
+  workflow_dispatch: # 手動で即実行したい時用
+
+jobs:
+  push-submissions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Push submissions
+        uses: koki-sato/atcoder-submissions-pusher@v1
+        with:
+          atcoder-username: ${{ secrets.ATCODER_USERNAME }}
+          atcoder-password: ${{ secrets.ATCODER_PASSWORD }}
+          # 自分の好きなプログラミング言語を指定（例: Python, C++）
+          # 指定しない場合は全てのACコードが取得されます
