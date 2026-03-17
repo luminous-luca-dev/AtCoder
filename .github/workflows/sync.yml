@@ -30,8 +30,8 @@ jobs:
 
       - name: Commit and Push
         run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "luminous-luca-dev"
+          git config --global user.email "luminous-luca-dev@users.noreply.github.com"
           git add .
           
           # 変更がある場合のみコミットする
